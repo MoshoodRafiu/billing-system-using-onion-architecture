@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\CustomerRequest;
 use Illuminate\Support\Facades\Session;
-use Invoicer\Domain\Repository\CustomerRepositoryInterface;
 use Invoicer\Domain\Service\CustomerService;
+use Invoicer\Domain\Repository\CustomerRepositoryInterface;
 
 class CustomerController extends Controller
 {
@@ -22,7 +22,7 @@ class CustomerController extends Controller
         return view('customer.modify');
     }
 
-    public function store(Request $request)
+    public function store(CustomerRequest $request)
     {
         $this->customerService->persistCustomer($request);
         Session::flash('success', 'Customer Saved');
