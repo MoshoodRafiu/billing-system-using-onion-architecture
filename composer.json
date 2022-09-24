@@ -1,0 +1,14 @@
+{
+    "name": "rom/billing-system-using-onion-architecture",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rafiu Moshood",
+            "email": "meezyloaded@gmail.com"
+        }
+    ],
+    "autoload": {
+        "Invoicer\\": ["src/"]
+    },
+    "require": {}
+}

@@ -2,10 +2,17 @@
 
 declare(strict_types=1);
 
-namespace CleanPHP\Domain\Entity;
+namespace Invoicer\Domain\Entity;
 
 abstract class AbstractEntity
 {
+    /**
+     * Entity id
+     *
+     * @var integer
+     */
+    protected int $id;
+
     /**
      * Gets the entity id
      *
