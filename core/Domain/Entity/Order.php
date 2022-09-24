@@ -4,32 +4,34 @@ declare(strict_types=1);
 
 namespace Invoicer\Domain\Entity;
 
+use Dictrine\ORM\Mapping as ORM;
+
 class Order extends AbstractEntity
 {
     /**
      * Order customer
-     *
+     * @ORM\ManyToOne(targetEntity="Customer", mappedBy="orders", cascade={"persist"})
      * @var Customer
      */
     protected Customer $customer;
 
     /**
      * Order Number
-     *
+     * @ORM\Column(type="string")
      * @var string
      */
     protected string $orderNumber;
 
     /**
      * Order description
-     *
+     * @ORM\Column(type="string")
      * @var string
      */
     protected string $description;
 
     /**
      * Total amount of order
-     *
+     * @ORM\Column(type="decimal", precision="10", scale="2")
      * @var float
      */
     protected float $total;

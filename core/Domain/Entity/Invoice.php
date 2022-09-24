@@ -5,26 +5,31 @@ declare(strict_types=1);
 namespace Invoicer\Domain\Entity;
 
 use DateTime;
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="invoices")
+ */
 class Invoice extends AbstractEntity
 {
     /**
      * invoice order
-     *
+     * @ORM\ManyToOne(targetEntity="Order", mappedBy="invoices", cascade={"persist"})
      * @var Order
      */
     protected Order $order;
 
     /**
      * Date invoice was generated
-     *
+     * @ORM\Column(type="timestamp")
      * @var DateTime
      */
-    protected DateTime $InvoiceDate;
+    protected DateTime $invoiceDate;
 
     /**
      * Total amount
-     *
+     * @ORM\Column(type="decimal", precision="10", scale="2")
      * @var float
      */
     protected float $total;
@@ -59,19 +64,19 @@ class Invoice extends AbstractEntity
      */
     public function getInvoiceDate(): DateTime
     {
-        return $this->InvoiceDate;
+        return $this->invoiceDate;
     }
 
     /**
      * Set date invoice was generated
      *
-     * @param  DateTime  $InvoiceDate  Date invoice was generated
+     * @param  DateTime  $invoiceDate  Date invoice was generated
      *
      * @return  self
      */
-    public function setInvoiceDate(DateTime $InvoiceDate): self
+    public function setInvoiceDate(DateTime $invoiceDate): self
     {
-        $this->InvoiceDate = $InvoiceDate;
+        $this->invoiceDate = $invoiceDate;
         return $this;
     }
 
