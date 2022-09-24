@@ -15,4 +15,4 @@ yarn-error.log
 /.idea
 /.vscode
 .phpunit.result.cache
-data/
+/storage/database.db
