@@ -16,3 +16,4 @@ yarn-error.log
 /.vscode
 .phpunit.result.cache
 /storage/database.db
+/storage/database.test.db
