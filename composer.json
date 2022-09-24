@@ -7,10 +7,20 @@
             "email": "meezyloaded@gmail.com"
         }
     ],
+    "require": {
+        "php": "^8.0.2"
+    },
     "autoload": {
-        "Invoicer\\": ["src/"]
+        "psr-4": {
+            "Invoicer\\": ["src/"]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spec\\": ["specs/"]
+        }
     },
     "require-dev": {
-        "peridot-php/peridot": "^1.19"
+        "phpunit/phpunit": "^9.5"
     }
 }
