@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Invoicer\Domain\Factory;
 
+use DateTime;
 use Invoicer\Domain\Entity\Invoice;
 use Invoicer\Domain\Entity\Order;
 
@@ -19,6 +20,7 @@ class InvoiceFactory
     {
         $invoice = new Invoice();
         $invoice->setOrder($order)
+                ->setInvoiceDate(new DateTime())
                 ->setTotal($order->getTotal());
         return $invoice;
     }

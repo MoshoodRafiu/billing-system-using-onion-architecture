@@ -6,7 +6,7 @@ namespace Invoicer\Domain\Repository;
 
 use Invoicer\Domain\Entity\AbstractEntity;
 
-interface CustomerRepositoryInterface extends AbstractEntity
+interface CustomerRepositoryInterface extends AbstractRepositoryInterface
 {
-    
+
 }

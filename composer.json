@@ -17,10 +17,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Spec\\": ["specs/"]
+            "Tests\\": ["tests/"]
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "spatie/phpunit-watcher": "^1.23"
     }
 }
