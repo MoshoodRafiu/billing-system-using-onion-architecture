@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Invoicer\Persistence\Doctrine\Repository;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Invoicer\Domain\Entity\AbstractEntity;
 use Invoicer\Domain\Repository\AbstractRepositoryInterface;
 
@@ -18,7 +18,7 @@ abstract class AbstractDoctrineRepository implements AbstractRepositoryInterface
     /**
      * @param EntityManager $em
      */
-    public function __construct(protected EntityManager $entityManager)
+    public function __construct(protected EntityManagerInterface $entityManager)
     {
         if (empty($this->entityClass)) {
             throw new \RuntimeException(

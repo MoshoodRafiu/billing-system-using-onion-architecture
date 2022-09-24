@@ -4,18 +4,24 @@ declare(strict_types=1);
 
 namespace Invoicer\Domain\Entity;
 
+use Doctrine\ORM\Mapping AS ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="customers")
+ */
 class Customer extends AbstractEntity
 {
     /**
      * Customer full name
-     *
+     * @ORM\Column(type="string")
      * @var string
      */
     protected string $name;
 
     /**
      * Customer email address
-     *
+     * @ORM\Column(type="string")
      * @var string
      */
     protected string $email;

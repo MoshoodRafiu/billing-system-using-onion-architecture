@@ -31,7 +31,7 @@ return [
             'connection'    => env('DB_CONNECTION', 'mysql'),
             'namespaces'    => [],
             'paths'         => [
-                base_path('app/Entities')
+                base_path('core/Domain/Entity')
             ],
             'repository'    => Doctrine\ORM\EntityRepository::class,
             'proxies'       => [

@@ -4,10 +4,15 @@ declare(strict_types=1);
 
 namespace Invoicer\Domain\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 abstract class AbstractEntity
 {
     /**
      * Entity id
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      *
      * @var integer
      */

@@ -23,5 +23,5 @@ Route::controller(CustomerController::class)->group(function () {
     Route::get('/customers', 'create');
     Route::post('/customers', 'store');
     Route::get('/customers/{customer}/edit', 'edit');
-    Route::put('/customers/{customer}/edit', 'update');
+    Route::put('/customers/{customer}', 'update');
 });

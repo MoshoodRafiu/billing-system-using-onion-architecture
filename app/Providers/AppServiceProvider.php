@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use App\Http\Controllers\CustomerController;
 use Illuminate\Support\ServiceProvider;
 use Invoicer\Domain\Repository\CustomerRepositoryInterface;
+use Invoicer\Persistence\Doctrine\Repository\CustomerRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
