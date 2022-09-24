@@ -13,5 +13,5 @@ interface OrderRepositoryInterface extends AbstractRepositoryInterface
      *
      * @return iterable
      */
-    public function getUnInvoicedOrders(): iterable;
+    public function getUnInvoicedOrders(): array;
 }

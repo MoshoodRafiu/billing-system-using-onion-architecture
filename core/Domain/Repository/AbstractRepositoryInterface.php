@@ -11,9 +11,9 @@ interface AbstractRepositoryInterface
     /**
      * Get's entity by id
      *
-     * @param string $id
+     * @param int $id
      */
-    public function getById(string $id);
+    public function getById(int $id);
 
     /**
      * Gets all entity
